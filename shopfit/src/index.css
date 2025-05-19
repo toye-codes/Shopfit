@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Ensures horizontal scrolling */
+.hide-scrollbar {
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Webkit browsers */
+}
+
+/* Optional: Adjust spacing between cards */
+.flex {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+.space-x-8 {
+  gap: 1.5rem; /* Space between items */
+}
+
+/* Prevent cards from shrinking */
+.flex-shrink-0 {
+  flex-shrink: 0; /* Prevent the card from shrinking */
+}
+
+/* Set fixed width for the product cards */
+.ProductCard {
+  width: 250px; /* Adjust this value as per your design */
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
