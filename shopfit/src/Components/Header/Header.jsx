@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Star, Menu, X, ShoppingCart, Heart } from "lucide-react";
+import PromoCarousel from "../HeroSection/PromoCarousel";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +59,7 @@ const Header = () => {
           </div>
 
           {/* Headphones Icon */}
-          <div className="hidden md:inline flex justify-between gap-5 text-white ">
+          <div className="hidden md:flex justify-between gap-5 text-white ">
             <button className="hidden md:inline bg-[#d6bfa2] px-4 py-2 rounded-md shadow-xl hover:bg-[#f0e8d9] transition-colors duration-300">
               Sign up
             </button>
