@@ -7,7 +7,7 @@ const promotions = [
   "🛍️ New Arrivals Just Dropped — Shop Now!",
 ];
 
-const PromoCarousel = () => {
+const Carousel = () => {
   return (
     <div className="w-full overflow-hidden bg-[#8b7b68] py-2 px-4">
       <div className="whitespace-nowrap animate-marquee text-white font-medium text-sm md:text-base">
@@ -21,4 +21,4 @@ const PromoCarousel = () => {
   );
 };
 
-export default PromoCarousel;
+export default Carousel;

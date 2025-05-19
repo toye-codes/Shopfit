@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Star, Menu, X, ShoppingCart, Heart } from "lucide-react";
-import PromoCarousel from "../HeroSection/PromoCarousel";
+import Carousel from "../../Components/HeroSection/Carousel";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,7 +79,7 @@ const Header = () => {
 
       {/* Promo Carousel */}
       <div>
-        <PromoCarousel />
+        <Carousel />
       </div>
 
       {/* Mobile Nav */}
