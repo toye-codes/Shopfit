@@ -2,7 +2,6 @@ import Header from "./Components/Header/Header";
 import HeroPage from "./Components/HeroSection/HeroPage";
 import FeaturedProducts from "./Components/Products/FeaturedProducts";
 import Categories from "./Components/Categories/Categories";
-import PromoCarousel from "./Components/HeroSection/PromoCarousel";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import BestSellers from "./Components/Products/BestSellers";
 import NewsletterSignup from "./Components/Reusables/Popups/NewsLetter";
