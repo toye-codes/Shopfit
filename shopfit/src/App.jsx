@@ -1,47 +1,23 @@
-import Header from "./Components/Header/Header";
-import HeroPage from "./Components/HeroSection/HeroPage";
-import FeaturedProducts from "./Components/Products/FeaturedProducts";
-import Categories from "./Components/Categories/Categories";
-import Testimonial from "./Components/Testimonial/Testimonial";
-import BestSellers from "./Components/Products/BestSellers";
-import NewsletterSignup from "./Components/Reusables/Popups/NewsLetter";
-import ShopWithUs from "./Components/HeroSection/ShopWithUs";
-import Footer from "./Components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Category from "./Pages/Category";
+import Layout from "./Layout/Layout";
 
-
-const App = () => {
+export default function App() {
   return (
-    <div className="text-xl  z-10 text-white">
-      <div>
-        <Header />
-      </div>
-
-      <div className="shadow-xl">
-        <HeroPage />
-        <div className="flex flex-col items-center align-middle">
-          <NewsletterSignup />
-        </div>
-      </div>
-
-      {/* Featured Products Section */}
-      <div className="shadow-xl">
-        <FeaturedProducts />
-        <Categories />
-        <BestSellers />
-      </div>
-
-      <div>
-        <ShopWithUs />
-      </div>
-      <div className=" py-">
-        <Testimonial />
-      </div>
-
-      <div>
-        <Footer />
-      </div>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/categories/:categoryName" element={<Category />} />
+      </Routes>
+    </Layout>
   );
-};
-
-export default App;
+}

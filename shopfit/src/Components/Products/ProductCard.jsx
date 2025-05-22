@@ -1,4 +1,4 @@
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart, ShoppingCart, Star, StarHalf } from "lucide-react";
 
 const ProductCard = ({ product }) => {
   const rating = product.rating?.rate || 0;
@@ -21,35 +21,18 @@ const ProductCard = ({ product }) => {
       </h3>
 
       {/* Star Rating */}
-      <div className="flex items-center mb-2">
+      <div className="flex items-center mb-2 text-yellow-400">
         {[...Array(fullStars)].map((_, i) => (
-          <svg
-            key={`full-${i}`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#facc15"
-            viewBox="0 0 24 24"
-            className="w-4 h-4 sm:w-5 sm:h-5">
-            <path d="M12 .587l3.668 7.568L24 9.75l-6 5.905L19.335 24 12 19.897 4.665 24 6 15.655 0 9.75l8.332-1.595z" />
-          </svg>
+          <Star key={`full-${i}`} className="w-4 h-4 sm:w-5 sm:h-5" />
         ))}
-        {hasHalfStar && (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#facc15"
-            viewBox="0 0 24 24"
-            className="w-4 h-4 sm:w-5 sm:h-5">
-            <path d="M12 .587l3.668 7.568L24 9.75l-6 5.905L19.335 24 12 19.897V.587z" />
-          </svg>
-        )}
+        {hasHalfStar && <StarHalf className="w-4 h-4 sm:w-5 sm:h-5" />}
         {[...Array(emptyStars)].map((_, i) => (
-          <svg
+          <Star
             key={`empty-${i}`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#e5e7eb"
-            viewBox="0 0 24 24"
-            className="w-4 h-4 sm:w-5 sm:h-5">
-            <path d="M12 .587l3.668 7.568L24 9.75l-6 5.905L19.335 24 12 19.897 4.665 24 6 15.655 0 9.75l8.332-1.595z" />
-          </svg>
+            className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300"
+            stroke="currentColor"
+            fill="none"
+          />
         ))}
       </div>
 

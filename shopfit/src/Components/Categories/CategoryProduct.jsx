@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchProductsByCategory } from "../../utility/fetchCategories"; 
+import { fetchProductsByCategory } from "../../utility/fetchCategories";
 import SkeletonCard from "../Reusables/SkeletonCard";
-import ProductCard from "../Products/ProductCard"
+import ProductCard from "../Products/ProductCard";
 
 const CategoryProduct = ({ selectedCategory }) => {
   const {
@@ -39,9 +39,16 @@ const CategoryProduct = ({ selectedCategory }) => {
   }
 
   return (
-    <section className="py-10 grid grid-cols-2 sm:flex gap-4 overflow-x-auto no-scrollbar">
+    <section
+      className="
+        py-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 md:flex md:overflow-x-auto md:gap-6 md:snap-x md:scroll-smooth no-scrollbar"
+      >
       {products.map((product) => (
-        <div key={product.id} className=" flex-shrink-0">
+        <div
+          key={product.id}
+          className="
+            flex-shrink-0 md:w-[280px] w-full"
+          >
           <ProductCard product={product} />
         </div>
       ))}
